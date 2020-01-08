@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cat energy - каталог товаров</title>
+  <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <div class="page-header__logo-container">
+        <a class="page-header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="page-header__image-logo" src="img/logo-mobile.svg" width="255" height="65" alt="Интернет магазин Cat-Energy">
+          </picture>
+        </a>
+      </div>
+      <nav class="page-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link-active">Подбор программы</a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="form-main">
+    <form class="form-main__section" action="https://echo.htmlacademy.ru" method="post">
+      <header class="form-main__header-wrapper">
+        <h1 class="form-main__title">Подбор программы</h1>
+        <p class="form-main__instruction">Заполните анкету и мы подберем
+        программу питания для вашего кота</p>
+      </header>
+      <div class="form-main__flex-wrapper">
+        <fieldset class="form-main__field form-main__field-cat">
+          <div class="form-main__wrapper">
+            <h2 class="visually-hidden">Данные кота</h2>
+            <p class="form-main__label-input">
+              <label for="form-main__input--cat-name" class="form-main__label">Имя:*</label>
+              <input class="form-main__input form-main__input--cat-name" id="form-main__input--cat-name" type="text" name="name" placeholder="Барсик" required="">
+            </p>
+            <p class="form-main__label-input">
+              <label class="form-main__label" for="form-main__input--weight">Вес (Кг):* </label>
+              <input class="form-main__input form-main__input--weight" id="form-main__input--weight" type="number" name="weight" min="1" max="100" placeholder="7" required="">
+            </p>
+            <p class="form-main__label-input">
+              <label class="form-main__label" for="form-main__input--age">Возраст (Лет):</label>
+              <input class="form-main__input form-main__input--age" id="form-main__input--age" type="number" name="age" min="1" max="100" placeholder="7">
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="form-main__field form-main__field-radio">
+          <div class="form-main__wrapper">
+            <h2 class="visually-hidden">Программа похудения</h2>
+            <ul class="form-main__radio-list">
+              <li class="form-main__radio-item">
+                  <input class="form-main__radio" id="form-main__radio-1" type="radio" name="program" checked="">
+                  <label class="form-main__label form-main__label--radio" for="form-main__radio-1">Похудение
+                </label>
+              </li>
+              <li class="form-main__radio-item">
+                  <input class="form-main__radio" id="form-main__radio-2" type="radio" name="program">
+                  <label class="form-main__label form-main__label--radio" for="form-main__radio-2">Набор массы
+                </label>
+              </li>
+              <li class="form-main__radio-item">
+                  <input class="form-main__radio" id="form-main__radio-3" type="radio" name="program">
+                  <label class="form-main__label form-main__label--radio" for="form-main__radio-3">Не знаю (нужен ваш совет)
+                </label>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+      </div>
+      <fieldset class="form-main__field form-main__field-owner">
+        <div class="form-main__wrapper">
+          <h2 class="form-main__section-title form-main__section-title--owner">Контактные данные (владельца кота)</h2>
+          <p class="form-main__label-input">
+            <label class="form-main__label" for="form-main__input--email">E-mail:*
+            </label>
+            <input class="form-main__input form-main__input--email" id="form-main__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="">
+            <svg class="form-main__svg form-main__svg--email" width="17" height="13">
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
+            </svg>
+          </p>
+          <p class="form-main__label-input">
+            <label class="form-main__label" for="form-main__input--tel">Телефон:*
+            </label>
+            <input class="form-main__input form-main__input--tel" id="form-main__input--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" pattern="[0-9]{11}" required="">
+            <svg class="form-main__svg form-main__svg--tel" width="20" height="20">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+          </p>
+        </div>
+      </fieldset>
+      <fieldset class="form-main__field form-main__field-comment">
+        <div class="form-main__wrapper">
+          <h2 class="form-main__section-title form-main__section-title--comment">Комментарий</h2>
+          <textarea class="form-main__text-area" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </div>
+      </fieldset>
+      <fieldset class="form-main__field form-main__field-checkbox">
+        <div class="form-main__wrapper">
+          <h2 class="form-main__section-title form-main__section-title--checkbox">Дополнительно</h2>
+          <ul class="form-main__checkbox-list">
+            <li class="form-main__checkbox-item">
+              <input class="form-main__checkbox" id="form-main__checkbox-sugar" type="checkbox" name="sugar" checked="">
+              <label class="form-main__label form-main__label--checkbox" for="form-main__checkbox-sugar">Сахарозаменитель
+              </label>
+            </li>
+            <li class="form-main__checkbox-item">
+              <input class="form-main__checkbox" id="form-main__checkbox-water" type="checkbox" name="water">
+              <label class="form-main__label form-main__label--checkbox" for="form-main__checkbox-water">Питьевая вода
+              </label>
+            </li>
+            <li class="form-main__checkbox-item">
+              <input class="form-main__checkbox" id="form-main__checkbox-milk" type="checkbox" name="milk">
+              <label class="form-main__label form-main__label--checkbox" for="form-main__checkbox-milk">Молоко
+              </label>
+            </li>
+            <li class="form-main__checkbox-item">
+              <input class="form-main__checkbox" id="form-main__checkbox-vitamins" type="checkbox" name="vitamins">
+              <label class="form-main__label form-main__label--checkbox" for="form-main__checkbox-vitamins">Витамины
+              </label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <div class="form-main__wrapper form-main__wrapper-button">
+        <button class="form-main__button green-button">Отправить заявку</button>
+        <small class="form-main__note">* — Обязательные поля</small>
+      </div>
+    </form>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__contacts contacts contacts--grey-bg">
+      <div class="contacts__wrapper">
+        <strong class="contacts__welcome-cry">Приглашаем<br> к сотрудничеству дилеров!</strong>
+        <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__sp">Санкт-Петербург</span></p>
+      </div>
+    </div>
+    <div class="page-footer__map map" id="map"></div>
+    <div class="page-footer__wrapper">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Интернет магазин Cat Energy">
+      </a>
+      <div class="page-footer__socials socials">
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vk" href="#"><span class="visually-hidden">VK</span>
+              <svg width="22" height="12">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--insta" href="#">
+              <span class="visually-hidden">instagramm</span>
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--fb" href="#">
+              <span class="visually-hidden">facebook</span>
+              <svg width="10" height="19">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <svg class="copyright__svg" width="27" height="34"><use xlink:href="img/sprite.svg#icon-copyright"></use></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/main-nav.js"></script>
+  <script src="/js/map.js"></script>
+  <script src="/js/form-error.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo8QXFB17HcpteQjzUUY51W-7FtWeZ3NY&callback=initMap" async=""></script>
+</body>
+</html>
